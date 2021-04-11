@@ -1,0 +1,101 @@
+﻿@model Disco2.Models.Музыканты
+@using Disco2.Models
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Музыканты</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Фамилия
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Фамилия)
+            </dd>
+
+            <dt>
+                Имя
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Имя)
+            </dd>
+
+            <dt>
+                Отчество
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Отчество)
+            </dd>
+
+            <dt>
+                Гражданство
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Гражданство)
+            </dd>
+            <dt>
+                Коллективы
+            </dt>
+            <dd>
+                @foreach (var item in Model.Музыканты_в_группах)
+                {
+                    @Html.ActionLink(item.Коллективы.Название + ",Год вступления: " + item.Год_вступления + ", ", "Details", "Коллективы", new { name = item.Коллективы.Название, id = item.ID_коллектива }, new { id = item.ID_коллектива, @class = "link" })
+                }
+
+            </dd>
+            </dd>
+            <dt>
+               Исполненные композиции
+            </dt>
+            <dd>
+          
+
+
+                @foreach (var item in Model.Музыканты_в_группах)
+                {
+
+                    foreach (var item1 in item.Исполнение_композиций)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Коллективы.Название)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item1.Композиции.Название)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item1.Дата_исполнения)
+                            </td>
+                           
+                        </tr>
+                    }
+                 
+                   
+                }
+
+
+                
+         
+
+
+</div>
+    <p>
+        @Html.ActionLink("Изменить", "Edit", new { id = Model.ID_музыканта }) |
+        @Html.ActionLink("Назад", "Index")
+    </p>
+</body>
+</html>

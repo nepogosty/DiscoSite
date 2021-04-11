@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Disco2.Models.Альбомы>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Название)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Дата_выпуска)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Название)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Дата_выпуска)
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id=item.ID_альбома }) |
+                @Html.ActionLink("Детали", "Details", new { id=item.ID_альбома }) |
+                @Html.ActionLink("Удалить", "Delete", new { id=item.ID_альбома })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Disco2.Models.Тип>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Название)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Название)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID_типа }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID_типа }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID_типа })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

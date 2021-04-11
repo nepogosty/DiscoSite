@@ -1,0 +1,45 @@
+﻿@model Disco2.Models.Альбомы
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Альбомы</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Название
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Название)
+            </dd>
+
+            <dt>
+                Дата выпуска
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Дата_выпуска)
+            </dd>
+            @foreach (var item in Model.Исполнение_композиций)
+            {
+                @Html.ActionLink(item.Композиции.Название + " " + item.Композиции.Год_выпуска +" , ", "Details", "Композиции", new { name = item.Композиции.Название, id = item.ID_композиции }, new { id = item.ID_композиции, @class = "link" })
+            }
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Изменить", "Edit", new { id = Model.ID_альбома }) |
+        @Html.ActionLink("Назад", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Disco2.Models.Музыканты>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Создать", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Фамилия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Имя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Отчество)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Гражданство)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Фамилия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Имя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Отчество)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Гражданство)
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id=item.ID_музыканта }) |
+                @Html.ActionLink("Детали", "Details", new { id=item.ID_музыканта }) |
+                @Html.ActionLink("Удалить", "Delete", new { id=item.ID_музыканта })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

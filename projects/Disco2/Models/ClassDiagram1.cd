@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Disco2.Models.DiscoContext">
+    <Position X="16.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAACAAAggAAQAAAIACAAABEAAAACAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\DiscoContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.LoginModel">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\register.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.RegisterModel">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAEAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\register.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.User">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAEAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.Альбомы">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAABAAIAAAAAAABAgAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Альбомы.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.Жанры" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Жанры.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.Исполнение_композиций">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAEAAAAAQAAAIACAAQAEAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Исполнение_композиций.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.Коллективы">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAkAAAQAAAAAAAAAEAAAAAAACAABAAAAAAAA=</HashCode>
+      <FileName>Models\Коллективы.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.Композиции">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAwQAQAEAAAAAAAAAAAAAAEQAAACAAAAAAAAAABAA=</HashCode>
+      <FileName>Models\Композиции.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.Музыканты">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAARQAQEAAAAQAAAAAAABAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\Музыканты.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.Музыканты_в_группах">
+    <Position X="8.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAgAIAAAAAAAAAAAAAAAACACAAAAAAAAAAg=</HashCode>
+      <FileName>Models\Музыканты_в_группах.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.Тип">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAIAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Тип.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Models.Тип_коллектива">
+    <Position X="12.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAIAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Тип_коллектива.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormsAuthApp.Controllers.AccountController">
+    <Position X="6.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Controllers.HomeController">
+    <Position X="14.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Controllers.АльбомыController">
+    <Position X="8.25" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\АльбомыController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Controllers.ЖанрыController">
+    <Position X="12.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ЖанрыController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Controllers.КомпозицииController">
+    <Position X="10.25" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\КомпозицииController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Controllers.МузыкантыController">
+    <Position X="4.25" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\МузыкантыController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Controllers.ТипController">
+    <Position X="0.5" Y="6" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ТипController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disco2.Controllers.КоллективыController">
+    <Position X="2" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\КоллективыController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Web.Mvc.Controller" Collapsed="true">
+    <Position X="7.25" Y="5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

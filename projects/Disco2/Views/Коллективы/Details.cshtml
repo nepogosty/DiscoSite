@@ -1,0 +1,103 @@
+﻿@model Disco2.Models.Коллективы
+@using Disco2.Models
+
+@{Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Коллективы</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Тип коллектива
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Тип_коллектива.Наименование)
+            </dd>
+
+            <dt>
+                Название
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Название)
+            </dd>
+
+            <dt>
+                Страна
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Страна)
+            </dd>
+
+            <dt>
+                Год
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Год_создания)
+            </dd>
+            <dt>
+                Музыканты
+            </dt>
+
+            <dd>
+                @foreach (var item in Model.Музыканты_в_группах)
+                {
+                    @Html.ActionLink(item.Музыканты.Фамилия + " " + item.Музыканты.Имя + " " + item.Год_вступления + " - " + item.Год_ухода + " , ", "Details", "Музыканты", new { name = item.Музыканты.Фамилия, id = item.ID_музыканта }, new { id = item.ID_музыканта, @class = "link" })
+                }
+
+                @*@string.Join(",", Model.Музыканты_в_группах.Select(p => p.Музыканты.Фамилия + " " + p.Музыканты.Имя + " " + p.Год_вступления + " - " + p.Год_ухода).ToList())*@
+            </dd>
+            <dt>
+                Альбомы
+            </dt>
+            <dd>
+                @foreach (var item in Model.Музыканты_в_группах)
+                {
+
+                    foreach (var item1 in item.Исполнение_композиций)
+                    {
+                        foreach (var item2 in item1.Альбомы)
+                        {
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Название)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Дата_выпуска)
+                            </td>
+
+                        }
+                    }
+
+
+                }
+            </dd>
+            <dd>
+                @*@foreach (var item in Model.Музыканты_в_группах)
+            {
+                @Html.ActionLink(item.Исполнение_композиций.Selec)+" " + item.Музыканты.Имя + " " + item.Год_вступления + " - " + item.Год_ухода + " , ", "Details", "Музыканты", new { name = item.Музыканты.Фамилия, id = item.ID_музыканта }, new { id = item.ID_музыканта, @class = "link" })
+            }*@
+
+                @*@string.Join(",", Model.Музыканты_в_группах.Select(p => p.Музыканты.Фамилия + " " + p.Музыканты.Имя + " " + p.Год_вступления + " - " + p.Год_ухода).ToList())*@
+            </dd>
+        </dl>
+        
+    </div>
+    <p>
+        @Html.ActionLink("Изменить", "Edit", new { id = Model.ID_коллектива }) |
+        @Html.ActionLink("Назад", "Index")
+    </p>
+</body>
+</html>

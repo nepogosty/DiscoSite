@@ -1,0 +1,84 @@
+﻿@model Disco2.Models.Композиции
+@using Disco2.Models
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Композиции</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                <h2>Название</h2>
+            </dt>
+
+            <dd>
+                <h2> @Html.DisplayFor(model => model.Название)</h2>
+            </dd>
+            <dt>
+                Жанр
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Жанры.Название)
+            </dd>
+
+            <dt>
+                Композиторы
+            </dt>
+
+            <dd>
+                @*@string.Join(",", Model.Композиторы.Select(p => p.Фамилия + " " + p.Имя).ToList())*@
+                @foreach (var item in Model.Композиторы)
+                {
+                    @Html.ActionLink(item.Фамилия + " " + item.Имя + ", ", "Details", "Музыканты", new { author = item.Имя, id = item.ID_музыканта }, new { id = item.ID_музыканта, @class = "link" })
+                }
+            </dd>
+            <dt>
+                Авторы
+            </dt>
+
+            <dd>
+                @*@string.Join(",", Model.Авторы.Select(p => p.Фамилия + " " + p.Имя).ToList())*@
+                @foreach (var item in Model.Авторы)
+                {
+                    @Html.ActionLink(item.Фамилия + " " + item.Имя + ", ", "Details", "Музыканты", new { author = item.Имя, id = item.ID_музыканта }, new { id = item.ID_музыканта, @class = "link" })
+                }
+            </dd>
+
+
+            <dt>
+                Исполняющие
+            </dt>
+            <dd>
+                @{ foreach (var item in Model.Исполнение_композиций)
+                    {
+                    <dt>
+                        
+                    </dt>
+
+                    <dd>
+                        @item.Музыканты_в_группах.Музыканты.Фамилия
+                        @item.Дата_исполнения.ToShortDateString()
+                    </dd>
+                }
+                }
+                </dd>
+           
+
+
+            </dl>
+        </div>
+        <p>
+           
+        </p>
+    </body>
+</html>

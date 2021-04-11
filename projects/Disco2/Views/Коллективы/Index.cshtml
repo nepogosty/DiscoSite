@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Disco2.Models.Коллективы>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Создать", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Тип_коллектива.Наименование)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страна)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Название)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Год_создания)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Тип_коллектива.Наименование)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Страна)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Название)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Год_создания)
+            </td>
+            <td>
+                @Html.ActionLink("Изменить", "Edit", new { id=item.ID_коллектива }) |
+                @Html.ActionLink("Детали", "Details", new { id=item.ID_коллектива }) |
+                @Html.ActionLink("Удалить", "Delete", new { id=item.ID_коллектива })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
